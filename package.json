@@ -1,0 +1,49 @@
+{
+    "name": "semantic-context-mcp",
+    "version": "1.0.0",
+    "description": "Enterprise-grade MCP server for semantic code search with shared vector database",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "start:http": "node dist/http-server.js",
+        "dev": "tsx src/index.ts",
+        "dev:http": "tsx src/http-server.ts",
+        "prepare": "npm run build",
+        "clean": "rm -rf dist",
+        "postinstall": "npm run build"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.18.0",
+        "@octokit/rest": "^19.0.13",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.3",
+        "chromadb": "^1.8.1",
+        "commander": "^14.0.0",
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "openai": "^4.28.4"
+    },
+    "devDependencies": {
+        "@types/commander": "^2.12.0",
+        "@types/node": "^20.11.17",
+        "tsx": "^4.7.1",
+        "typescript": "^5.3.3"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "keywords": [
+        "mcp",
+        "semantic-search",
+        "code-search",
+        "vector-database",
+        "enterprise",
+        "claude"
+    ],
+    "bin": {
+        "semantic-context-mcp": "./dist/index.js",
+        "semantic-context-mcp-http": "./dist/http-server.js"
+    }
+}
