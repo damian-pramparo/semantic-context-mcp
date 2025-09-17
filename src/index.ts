@@ -18,6 +18,11 @@ class EnterpriseCodeSearchMCP extends CodeSearchEngine {
       {
         name: "enterprise-code-search",
         version: "1.0.0"
+      },
+      {
+        capabilities: {
+          tools: {}
+        }
       }
     );
 
